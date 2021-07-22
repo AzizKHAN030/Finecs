@@ -1,0 +1,12 @@
+$fonts: ('Montserrat', 'Black', 900),
+        ('Montserrat', 'Regular', 400),
+        ('Montserrat', 'SemiBold', 600);
+        
+@each $font-name, $font-subname, $font-weight in $fonts {
+    @font-face {
+        font-family: $font-name;
+        src: url(../fonts/#{$font-name}-#{$font-subname}.woff);
+        font-style: normal;
+        font-weight: $font-weight;
+    }
+}

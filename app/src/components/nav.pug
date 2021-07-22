@@ -1,0 +1,13 @@
+nav.nav 
+    .container.nav__container 
+        .nav__logo 
+            a(href="#") 
+                img(src="images/finecs-logo.webp", alt="")
+        ul.nav__menu
+            each list in ["about"," editorial board","for authors","current issues","archives"]
+                li.nav__menu-item
+                    a(href="#")=list   
+        .nav__burger
+            img.nav__burger-ico.active(src="images/burger-open.svg", alt="")
+            img.nav__burger-ico(src="images/burger-close.svg", alt="")
+            

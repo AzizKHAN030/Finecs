@@ -1,0 +1,92 @@
+.nav {
+    position: relative;
+    z-index: 99;    
+    background: $main-color;
+    &__container{
+        @include flex(space-between);
+    }   
+    &__logo{
+        img{
+            height: 50px;
+        }
+        padding: 20px 0;
+        a{
+
+            font-weight: 700;
+            font-size: 20px;
+        }
+        margin-right: 45px; 
+    }
+    &__menu {
+        transition: .3s;
+
+        @include flex(space-between);
+        @include md{
+            background:rgb(236, 236, 236); 
+            position: absolute;
+            flex-direction: column;
+            width: 310px;
+            height: 100vh !important;
+            right: 0;
+            top: 95px;
+            justify-content: flex-start;
+            transform: translateX(100%);
+            a{
+                color:$main-color;
+            }
+
+            &.opened{
+                transform: translateX(0);
+            }
+        }   
+        &-item {
+            white-space: nowrap;
+            width: 100%;
+            padding: 20px 15px;
+            transition: .3s;
+            @include lg{
+                padding: 20px 6px;
+            }
+            @include md{
+                padding-left: 25px;
+                padding: 0;
+
+                a{
+                    display: block !important;
+                    padding: 20px 7px;
+                    font-weight: 600;       
+                }
+            }
+            a {
+                color:#fff;
+            }
+            &:hover{
+                background:$hover-color;
+                a{
+                        color:#fff;
+                }
+            }
+        }
+    }
+    &__burger{
+        position: relative;
+        transition: .3s;
+        display: none;
+        cursor: pointer;
+        @include full(25px);
+        @include md{
+            display:block;
+        }
+        img{
+            transition: .3s;
+            position: absolute;
+            opacity: 0;
+            &.active{
+                opacity: 1;
+            }
+        }
+    }
+
+
+
+}

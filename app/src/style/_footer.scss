@@ -1,0 +1,33 @@
+.footer{
+    margin-top: 20px;
+    padding: 40px 0;
+    background: $main-color;
+    color:#fff;
+    &__title{
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 20px;
+        @include sm{
+            margin-bottom: 10px;
+        }
+    }
+    &__text{
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+        @include sm{
+            font-size: 15px;
+            line-height: 20px;
+            padding: 0 10px;
+        }
+        a{
+            color: #fff;
+            text-decoration: underline;
+            transition: .3s;
+            &:hover{
+                color:rgb(2, 82, 255);
+            }
+        }
+    }
+    
+}
