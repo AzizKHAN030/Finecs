@@ -54,12 +54,12 @@
             }
             p{
                 line-height: 25px;
-                max-height: 100px; 
                 overflow: hidden;   
                 transition: .5s all;
-                &.full{
-                    max-height: 500px;
-                }    
+                color:$text-color;
+                @include xl{
+                    max-height: 147px;
+                }  
             }
             button{
                 @include flex;
@@ -81,12 +81,15 @@
                     width: 100%;
                     transform: translateY(-150%);
                     background:rgba($color: rgb(255,255,255), $alpha: 0.7);
-                    height: 20px;
+                    @media (prefers-color-scheme: dark) {
+                        background:rgba($color: rgb(17, 39, 58), $alpha: 0.7);
+                    }
+                    height: 18px;
                 }
                 img{    
                     transform: rotate(-90deg);
                     height: 15px;
-                    margin-left: 5px;
+                   
                 }
                 &.full{
                     img{

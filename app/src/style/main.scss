@@ -7,7 +7,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root{
+    --body-bg: #fff;
+    --text-color:rgb(78, 78, 78);
+    --main-color:#4fa7da;
+    --hover-color:#3a799e;
+}
 ul{
     list-style: none;
 }
@@ -23,11 +28,24 @@ textarea{
     outline: none;
 }
 
+html,body{
+    height: 100%;
+}
+
 body{
     font-family: 'Montserrat';
     font-weight: 400;
-    background: $white;
-    text-transform: capitalize;
+    background: var(--body-bg);
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content{
+    flex: 1 0 auto;
 }
 
 .title{
@@ -36,6 +54,14 @@ body{
     left: 50%;
     transform: translateX(-50%);
     color: $hover-color; 
+    font-weight: 600;
+    font-size: 30px;
+    margin: 0 auto 20px;
+    text-transform: capitalize;
+    text-align: center;
+    @include sm{
+        font-size: 25px;
+    }
     &::after{
         content:"";
         position: absolute;
@@ -47,10 +73,26 @@ body{
         transform: translateX(-50%);
     }
 }
+    
+@media (prefers-color-scheme: dark){
+    :root{
+        --body-bg:rgb(17, 39, 58);
+        --text-color:#fff;
+        --main-color:#04649c;
+        --hover-color:#5baedf;
+    }
+    .nav__logo a{
+        background:url("../images/finecs-logo.svg") no-repeat 0 0/contain ;
+    }
+}
 
 @import "nav";
 @import "header";
 @import "sidebars";
 @import "content";
 @import "aim";
+@import "editorial";
+@import "authors";
+@import "issue";
+@import "submission";
 @import "footer";

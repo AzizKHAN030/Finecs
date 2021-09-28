@@ -4,31 +4,23 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title For authors
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap-grid.min.css")
         link(rel="stylesheet", href="css/main.min.css")
-    -var about = "active";  
+    -var authors = "active";
     body 
-        .wrapper
-            include components/header
-            include components/sidebars
-            include components/content-about
-            include components/footer
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-          
-           
-            
+      .wrapper
+        include components/header
+        include components/sidebars
+        include components/content-authors
+        include components/footer
+        
+        
         script(src="includes/jquery.js") 
-        script(src="includes/slick.js") 
+        script(src="includes/slick.js")
+        script(src="lang/lang.js") 
         script(src="js/main.min.js") 
         
         
+        
+    

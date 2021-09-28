@@ -1,0 +1,80 @@
+.authors{
+
+    &__submission{
+        &-item{
+            margin-bottom: 35px;
+        }
+        &-title{
+            display: flex;
+            align-items:center;
+            margin-bottom: 20px;
+        }
+        &-ico{
+            height: 70px;
+            width: 70px;
+            border: 2px solid $main-color;
+            transition: .3s all;    
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+            @include sm{
+                height: 45px;
+                width: 45px;
+            }
+            svg{
+                height: 35px;
+                @include sm{
+                    height: 25px;
+                }
+                path{
+                    fill: $main-color;
+                }
+            }           
+        }
+        &-subtitle{
+            margin-left: 20px;
+            font-size: 25px;
+            font-weight: 600;
+            color:$text-color;
+            @include sm{
+                font-size: 18px; 
+                margin-left: 10px;   
+            }
+        }
+        &-content{
+            padding-left: 25px;
+        }
+        &-text{
+            font-size: 18px;
+            margin-bottom: 20px;
+            color:$text-color;
+            a{
+                color:$main-color;
+            }
+            @include sm{
+                font-size: 16px;
+            }
+        }
+        &-font,&-style{
+            font-size: 18px;
+            margin-bottom: 5px;
+            color:$text-color;
+            @include sm{
+                font-size: 16px;
+            }
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+    
+    
+    &-guide,&-fee{
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px 0;
+        color:$text-color;  
+    }
+}

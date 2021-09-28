@@ -7,28 +7,18 @@ html(lang="en")
         title Document
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap-grid.min.css")
         link(rel="stylesheet", href="css/main.min.css")
-    -var about = "active";  
+    -var editorial = "active"
     body 
-        .wrapper
+        .wrapper 
             include components/header
             include components/sidebars
-            include components/content-about
+            include components/content-editorial
             include components/footer
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-          
-           
-            
+        
+        
+        
+        
         script(src="includes/jquery.js") 
-        script(src="includes/slick.js") 
+        script(src="includes/slick.js")
+        script(src="lang/lang.js") 
         script(src="js/main.min.js") 
-        
-        

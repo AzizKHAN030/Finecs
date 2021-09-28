@@ -4,7 +4,9 @@ module.exports = () => {
         .pipe($.plugins.plumber())
         .pipe($.plugins.include())
         .pipe($.plugins.babel({presets: ['@babel/preset-env', 'minify']}))
-        .pipe($.plugins.rename('main.min.js'))
+        .pipe($.plugins.rename({
+            extname: '.min.js'
+        }))
         .pipe($.gulp.dest($.path.build.js))
         .on('end', $.bs.reload)
     })

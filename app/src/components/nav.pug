@@ -1,13 +1,24 @@
 nav.nav 
     .container.nav__container 
         .nav__logo 
-            a(href="#") 
-                img(src="images/finecs-logo.webp", alt="")
+            a(href="..") 
         ul.nav__menu
-            each list in ["about"," editorial board","for authors","current issues","archives"]
-                li.nav__menu-item
-                    a(href="#")=list   
+            li.nav__menu-item(class = about)
+                a.lng-home-link(href="..") home   
+            li.nav__menu-item(class = editorial)
+                a.lng-editorial-link(href="editorial-board.html") editorial board   
+            li.nav__menu-item(class = authors)
+                a.lng-authors-link(href="for-authors.html") for authors   
+            li.nav__menu-item(class = issues)
+                a.lng-issues-link(href="issues.html") issues   
+            li.nav__menu-item(class = submission)
+                a.lng-submission-link(href="submission.html") submission   
+            li.nav__menu-lang
+                    a(href='#', value = "eng") ENG 
+                    a(href='#', value = "ru") RU 
+                    a(href='#', value = "uzb") UZB 
         .nav__burger
-            img.nav__burger-ico.active(src="images/burger-open.svg", alt="")
-            img.nav__burger-ico(src="images/burger-close.svg", alt="")
+            .line1  
+            .line2 
+            .line3 
             

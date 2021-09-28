@@ -30,5 +30,8 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-webp": "^4.0.1",
     "node-sass": "^6.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

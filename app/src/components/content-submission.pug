@@ -1,0 +1,24 @@
+section.content.submission 
+    .container.submission__container 
+        h2.lng-submission-title.title There is no submission and publication fee.
+        form(class="submission__form") 
+            .submission__form-input 
+                input(type="text" name="name" id="name"  placeholder=" " autocomplete="off" required)     
+                label.lng-submission-label.submission__form-label(for="name") Name 
+            .submission__form-input 
+                input(type="email" name="email" id="email"  placeholder=" " autocomplete="off" required)
+                label.lng-submission-label.submission__form-label(for="email") Email
+            .submission__form-input 
+                textarea(name="text"  placeholder=" " id="textarea")
+                label.lng-submission-label.submission__form-label(for="textarea") Text  
+            .submission__form-file
+                .submit__file-info 
+                    include icons/submission-ico
+                    p.lng-submission-types You can upload your file as .PDF, .DOCX, .RTF or .ZIP in case of several files;
+                .submit__file-control 
+                    input(type="file" name="file" id="file"  hidden accept= ".pdf,.docx,.rtf,.zip" required)
+                    label.lng-submission-label(for="file") Choose file 
+                    span.lng-submission-label.chosen-file No file chosen
+                    .file-reset
+                        include icons/delete-ico
+            button.lng-submission-btn.submission__form-btn(type="submit") Submit

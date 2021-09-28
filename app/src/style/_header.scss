@@ -1,5 +1,4 @@
 .header{    
-    overflow: hidden;
     &__slider{
         margin: 20px 0;
         padding-bottom: 20px;
@@ -18,6 +17,10 @@
                 height: 250px;
                 @include lg{
                     height: 200px;
+                }
+                @include sm{
+                   width: 100%;
+                   height: auto;
                 }
             }
             .slider__content{

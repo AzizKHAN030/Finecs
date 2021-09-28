@@ -1,5 +1,5 @@
 $white: #fff;
 $black: #000;
-$main-color:#4fa7da;
-$hover-color:#3a799e;
-$text-color: rgb(78, 78, 78);
+$main-color:var(--main-color);
+$hover-color:var(--hover-color);
+$text-color: var(--text-color);

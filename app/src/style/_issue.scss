@@ -1,0 +1,114 @@
+.issues{
+    &__tab{
+        width: 100%;
+        margin: 0 auto;
+        border: 2px solid $main-color;
+        overflow: hidden;
+        &-title{
+            display: flex;
+            height: 60px;
+            button{
+                width: 50%;
+                background:none;
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+                cursor: pointer;
+                border:none;
+                border-bottom:2px solid $main-color;
+                color: $text-color;
+                transition: .5s;
+                @include sm{
+                    font-size: 16px;
+                }
+                &:first-child{
+                    border-right: 2px solid $main-color;
+                }
+                &:last-child{
+                    border-left: 2px solid $main-color;
+                }
+                &.active{
+                    border-bottom: none;
+                    background:$main-color;
+                    color:#fff;
+                }
+            }
+        }
+        &-content{
+            padding: 25px;      
+            position: relative;
+        }
+        &-item{ 
+            position: absolute; 
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+            h2{
+                font-size: 25px;
+                font-weight: 600;   
+                margin-bottom: 30px;
+                color:$text-color;
+                @include sm{
+                    font-size: 18px;
+                    margin-bottom: 18px;
+                }
+            }
+            &.active{
+                position: relative;
+                opacity: 1;
+                visibility: visible;
+            }
+            .issue{
+                @include flex(space-between, flex-start);
+                margin-bottom: 30px;
+                position: relative;
+                @include md{
+                    margin-bottom: 20px;
+                }
+                &-title{
+                    font-size: 20px;
+                    font-weight: 600;   
+                    text-transform: uppercase;
+                    color:$text-color;
+                    margin-bottom: 15px;
+                    @include md{
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+                    @include sm{
+                        font-size: 15px;
+                    }
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    color:$main-color;
+                    &:hover{
+                        color:$hover-color;
+                    }
+                    svg{
+                        margin-right: 5px;
+                    }
+                }
+                p{
+                    color:$text-color;
+                    
+                }
+                svg{
+                height: 25px;
+                }
+                &:after{
+                    content:"";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background:#e1e1e1; 
+                    left: 50%;  
+                    bottom: -5px;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
